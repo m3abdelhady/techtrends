@@ -1,0 +1,14 @@
+## Docker commands used to build the application 
+# docker build -t techtrends .
+
+## Docker commands used to run the application
+# docker run -d -p 7111:3111 techtrends
+
+## Docker commands used to get the application logs
+# docker logs b
+
+## Logs from the container running the TechTrends application
+# Message: 'An existing article is retrieved. title: '
+# Arguments: ('2020 CNCF Annual Report',)
+# 172.17.0.1 - - [26/Nov/2023 13:42:19] "GET /1 HTTP/1.1" 200 -
+# 172.17.0.1 - - [26/Nov/2023 13:42:19] "GET /static/css/main.css HTTP/1.1" 304 -
