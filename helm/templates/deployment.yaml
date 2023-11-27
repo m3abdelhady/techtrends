@@ -28,13 +28,13 @@ spec:
       
       livenessProbe:
         httpGet:
-          path: {{ .Values.livenessProbe.httpGet.path }}
-          port: {{ .Values.livenessProbe.httpGet.port }}
+          path: {{ .Values.livenessProbe.path }}
+          port: {{ .Values.livenessProbe.port }}
              
       readinessProbe:
         httpGet:
-          path: {{ .Values.readinessProbe.httpGet.path }}
-          port: {{ .Values.readinessProbe.httpGet.path }}
+          path: {{ .Values.readinessProbe.path }}
+          port: {{ .Values.readinessProbe.path }}
 
       resources:
           requests:
