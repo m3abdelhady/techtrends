@@ -8,7 +8,43 @@
 # docker logs b
 
 ## Logs from the container running the TechTrends application
-# Message: 'An existing article is retrieved. title: '
-# Arguments: ('2020 CNCF Annual Report',)
-# 172.17.0.1 - - [26/Nov/2023 13:42:19] "GET /1 HTTP/1.1" 200 -
-# 172.17.0.1 - - [26/Nov/2023 13:42:19] "GET /static/css/main.css HTTP/1.1" 304 -
+#  * Serving Flask app 'app' (lazy loading)
+#   * Environment: development
+#   * Debug mode: on
+#  WARNING:werkzeug: * Running on all addresses.
+#  WARNING:werkzeug: * Running on all addresses.
+#     WARNING: This is a development server. Do not use it in a production deployment.
+#     WARNING: This is a development server. Do not use it in a production deployment.
+#  INFO:werkzeug: * Running on http://172.17.0.2:3111/ (Press CTRL+C to quit)
+#  INFO:werkzeug: * Running on http://172.17.0.2:3111/ (Press CTRL+C to quit)
+#  INFO:werkzeug: * Restarting with stat
+#  INFO:werkzeug: * Restarting with stat
+#  WARNING:werkzeug: * Debugger is active!
+#  WARNING:werkzeug: * Debugger is active!
+#  INFO:werkzeug: * Debugger PIN: 927-316-235
+#  INFO:werkzeug: * Debugger PIN: 927-316-235
+#  DEBUG:app:Mon Nov 27 18:14:46 2023, List all article.
+#  DEBUG:app:Mon Nov 27 18:14:46 2023, List all article.
+#  INFO:werkzeug:172.17.0.1 - - [27/Nov/2023 18:14:46] "GET / HTTP/1.1" 200 -
+#  INFO:werkzeug:172.17.0.1 - - [27/Nov/2023 18:14:46] "GET / HTTP/1.1" 200 -
+#  INFO:werkzeug:172.17.0.1 - - [27/Nov/2023 18:14:46] "GET /static/css/main.css HTTP/1.1" 304 -
+#  INFO:werkzeug:172.17.0.1 - - [27/Nov/2023 18:14:46] "GET /static/css/main.css HTTP/1.1" 304 -
+#  DEBUG:app:Mon Nov 27 18:14:48 2023, An existing article is retrieved. title: 2020 CNCF Annual Report
+#  DEBUG:app:Mon Nov 27 18:14:48 2023, An existing article is retrieved. title: 2020 CNCF Annual Report
+#  INFO:werkzeug:172.17.0.1 - - [27/Nov/2023 18:14:48] "GET /1 HTTP/1.1" 200 -
+#  INFO:werkzeug:172.17.0.1 - - [27/Nov/2023 18:14:48] "GET /1 HTTP/1.1" 200 -
+#  INFO:werkzeug:172.17.0.1 - - [27/Nov/2023 18:14:48] "GET /static/css/main.css HTTP/1.1" 304 -
+#  INFO:werkzeug:172.17.0.1 - - [27/Nov/2023 18:14:48] "GET /static/css/main.css HTTP/1.1" 304 -
+#  INFO:werkzeug:172.17.0.1 - - [27/Nov/2023 18:14:52] "GET /create HTTP/1.1" 200 -
+#  INFO:werkzeug:172.17.0.1 - - [27/Nov/2023 18:14:52] "GET /create HTTP/1.1" 200 -
+#  INFO:werkzeug:172.17.0.1 - - [27/Nov/2023 18:14:52] "GET /static/css/main.css HTTP/1.1" 304 -
+#  INFO:werkzeug:172.17.0.1 - - [27/Nov/2023 18:14:52] "GET /static/css/main.css HTTP/1.1" 304 -
+#  DEBUG:app:Mon Nov 27 18:14:59 2023, A new article is created. title: test
+#  DEBUG:app:Mon Nov 27 18:14:59 2023, A new article is created. title: test
+#  INFO:werkzeug:172.17.0.1 - - [27/Nov/2023 18:14:59] "POST /create HTTP/1.1" 302 -
+#  INFO:werkzeug:172.17.0.1 - - [27/Nov/2023 18:14:59] "POST /create HTTP/1.1" 302 -
+#  DEBUG:app:Mon Nov 27 18:14:59 2023, List all article.
+#  DEBUG:app:Mon Nov 27 18:14:59 2023, List all article.
+#  INFO:werkzeug:172.17.0.1 - - [27/Nov/2023 18:14:59] "GET / HTTP/1.1" 200 -
+#  INFO:werkzeug:172.17.0.1 - - [27/Nov/2023 18:14:59] "GET / HTTP/1.1" 200 -
+#  INFO:werkzeug:172.17.0.1 - - [27/Nov/2023 18:14:59] "GET /static/css/main.css HTTP/1.1" 304 

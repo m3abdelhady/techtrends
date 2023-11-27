@@ -5,6 +5,8 @@ from werkzeug.exceptions import abort
 
 import logging
 import sys
+import time
+
 connection_count = 0
 
 # Function to get a database connection.
@@ -23,6 +25,10 @@ def get_post(post_id):
                         (post_id,)).fetchone()
     connection.close()
     return post
+
+def log_message(text):
+    date = time.asctime()
+    return f"{date}, {text}"
 
 # Function to get a post count
 def get_post_count():
@@ -43,6 +49,7 @@ def index():
     connection = get_db_connection()
     posts = connection.execute('SELECT * FROM posts').fetchall()
     connection.close()
+    app.logger.debug(log_message("List all article."))
     return render_template('index.html', posts=posts)
 
 # Define how each individual article is rendered 
@@ -51,16 +58,16 @@ def index():
 def post(post_id):
     post = get_post(post_id)
     if post is None:
-      app.logger.debug('A non-existing article is accessed')
+      app.logger.debug(log_message("A non-existing article is accessed."))
       return render_template('404.html'), 404
     else:
-      app.logger.debug('An existing article is retrieved. title: ',post['title'])
+      app.logger.debug(log_message( 'An existing article is retrieved. title: ' + post['title']))
       return render_template('post.html', post=post)
 
 # Define the About Us page
 @app.route('/about')
 def about():
-    app.logger.debug('The "About Us" page is retrieved')
+    app.logger.debug(log_message( 'The "About Us" page is retrieved'))
     return render_template('about.html')
 
 # Define the post creation functionality 
@@ -78,7 +85,7 @@ def create():
                          (title, content))
             connection.commit()
             connection.close()
-            app.logger.debug('A new article is created. title: ', title)
+            app.logger.debug(log_message('A new article is created. title: ' + title))
             return redirect(url_for('index'))
 
     return render_template('create.html')
