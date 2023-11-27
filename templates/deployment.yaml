@@ -20,11 +20,11 @@ spec:
     spec:
       containers:
       - image: {{ .Values.image.repository }}
-        imagePullPolicy: { .Values.image.pullPolicy }}
+        imagePullPolicy: {{ .Values.image.pullPolicy }}
         name: techtrends
 
       ports:
-      - containerPort: { .Values.containerPort }}
+      - containerPort: {{ .Values.containerPort }}
       
       livenessProbe:
         httpGet:
